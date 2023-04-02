@@ -1,0 +1,32 @@
+name: 'scp-deployer'
+author: 'Boris Breuer'
+description: 'Upload files using SCP'
+inputs:
+  host:
+    description: 'Remote host'
+    required: true
+  username:
+    description: 'Remote host username'
+    required: true
+  key:
+    description: 'SSH private key'
+    required: false
+  password:
+    description: 'ssh remote password'
+    required: false
+  port:
+    description: 'Remote host SSH port'
+    required: false
+    default: 22
+  source:
+    description: 'Source local file path'
+    required: true
+  target:
+    description: 'Remote directory to copy the file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'chevrons-up'
+  color: 'orange'
