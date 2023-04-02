@@ -2,6 +2,8 @@
 
 sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" 'rm -rf test'
 
+echo "$INPUT_TARGET"
+
 #sshpass -p $INPUT_PASSWORD scp -qr -P $INPUT_PORT -o StrictHostKeyChecking=no $INPUT_SOURCE "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_TARGET"
 
 #echo "SCP-Deployer - Start"
