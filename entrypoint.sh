@@ -1,5 +1,6 @@
 
-#!/bin/sh
+#!/bin/bash
+
 echo "SCP-Deployer - Start"
 echo ""
 echo "     ____             _         ____"
