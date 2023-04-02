@@ -1,4 +1,4 @@
-name: 'scp-deploy'
+name: 'scp-deploy-it'
 author: 'Boris Breuer'
 description: 'Upload files using SCP'
 inputs:
