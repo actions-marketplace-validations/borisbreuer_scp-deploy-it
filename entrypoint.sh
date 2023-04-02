@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" -t "rm -r test/"
+sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" -tt "rm -r test/"
 
 echo '"$INPUT_TARGET"'
 
