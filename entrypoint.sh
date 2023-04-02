@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 echo "SCP-Deployer - Start"
