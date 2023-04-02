@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" "rm -fr $INPUT_TARGET"
 sshpass -p $INPUT_PASSWORD scp -qr -P $INPUT_PORT -o StrictHostKeyChecking=no $INPUT_SOURCE "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_TARGET"
 
 
@@ -12,7 +13,7 @@ sshpass -p $INPUT_PASSWORD scp -qr -P $INPUT_PORT -o StrictHostKeyChecking=no $I
 #    echo "Transfer process complete using SSH keys"
 #else
 #    echo "Trying password authentication as key is not available"
-#    #sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" "rm -fr $INPUT_TARGET"
+#    sshpass -p $INPUT_PASSWORD ssh "$INPUT_USERNAME"@"$INPUT_HOST" "rm -fr $INPUT_TARGET"
 #    sshpass -p $INPUT_PASSWORD scp -qr -P $INPUT_PORT -o StrictHostKeyChecking=no $INPUT_SOURCE "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_TARGET"
 #    echo "Transfer process complete using password"
 #fi
